@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3518AE9A1CE4C7BB00F86184 /* CPImageControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3518AE991CE4C7BB00F86184 /* CPImageControllerProtocol.swift */; };
+		3518AE9A1CE4C7BB00F86184 /* CPImageViewerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3518AE991CE4C7BB00F86184 /* CPImageViewerProtocol.swift */; };
 		353941711CDDF47F0044FD7C /* CPImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353941671CDDF47E0044FD7C /* CPImageViewer.framework */; };
 		353941781CDDF47F0044FD7C /* CPImageViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353941771CDDF47F0044FD7C /* CPImageViewerTests.swift */; };
-		353941851CDDF57A0044FD7C /* CPImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553DFA41C8EFE4000BCB077 /* CPImageViewerViewController.swift */; };
+		353941851CDDF57A0044FD7C /* CPImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553DFA41C8EFE4000BCB077 /* CPImageViewer.swift */; };
 		353941861CDDF57B0044FD7C /* CPImageViewerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553DFA21C8EFE4000BCB077 /* CPImageViewerAnimator.swift */; };
 		353941871CDDF57B0044FD7C /* CPImageViewerAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553DFA11C8EFE4000BCB077 /* CPImageViewerAnimationTransition.swift */; };
 		353941881CDDF57B0044FD7C /* CPImageViewerInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553DFA31C8EFE4000BCB077 /* CPImageViewerInteractiveTransition.swift */; };
@@ -26,6 +26,7 @@
 		95D3A3131C71E26F003A750C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3A3121C71E26F003A750C /* AppDelegate.swift */; };
 		95D3A31A1C71E270003A750C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D3A3191C71E270003A750C /* Assets.xcassets */; };
 		95D3A31D1C71E270003A750C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D3A31B1C71E270003A750C /* LaunchScreen.storyboard */; };
+		DB099D04215B40D7006B94D8 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB099D03215B40D7006B94D8 /* CollectionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3518AE991CE4C7BB00F86184 /* CPImageControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPImageControllerProtocol.swift; sourceTree = "<group>"; };
+		3518AE991CE4C7BB00F86184 /* CPImageViewerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPImageViewerProtocol.swift; sourceTree = "<group>"; };
 		353941671CDDF47E0044FD7C /* CPImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CPImageViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		353941701CDDF47F0044FD7C /* CPImageViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPImageViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		353941771CDDF47F0044FD7C /* CPImageViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPImageViewerTests.swift; sourceTree = "<group>"; };
@@ -75,7 +76,7 @@
 		3553DFA11C8EFE4000BCB077 /* CPImageViewerAnimationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPImageViewerAnimationTransition.swift; sourceTree = "<group>"; };
 		3553DFA21C8EFE4000BCB077 /* CPImageViewerAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPImageViewerAnimator.swift; sourceTree = "<group>"; };
 		3553DFA31C8EFE4000BCB077 /* CPImageViewerInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPImageViewerInteractiveTransition.swift; sourceTree = "<group>"; };
-		3553DFA41C8EFE4000BCB077 /* CPImageViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPImageViewerViewController.swift; sourceTree = "<group>"; };
+		3553DFA41C8EFE4000BCB077 /* CPImageViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPImageViewer.swift; sourceTree = "<group>"; };
 		35B8E52A1CDDF78E00940716 /* CPImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPImageViewer.h; path = Classes/CPImageViewer.h; sourceTree = SOURCE_ROOT; };
 		35B8E5311CDDF94900940716 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35B8E5351CDE244700940716 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Classes/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -89,6 +90,7 @@
 		95D3A3121C71E26F003A750C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D3A3191C71E270003A750C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95D3A31C1C71E270003A750C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB099D03215B40D7006B94D8 /* CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,11 +142,11 @@
 		3553DFA01C8EFE4000BCB077 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3553DFA41C8EFE4000BCB077 /* CPImageViewerViewController.swift */,
+				3518AE991CE4C7BB00F86184 /* CPImageViewerProtocol.swift */,
+				3553DFA41C8EFE4000BCB077 /* CPImageViewer.swift */,
 				3553DFA21C8EFE4000BCB077 /* CPImageViewerAnimator.swift */,
 				3553DFA11C8EFE4000BCB077 /* CPImageViewerAnimationTransition.swift */,
 				3553DFA31C8EFE4000BCB077 /* CPImageViewerInteractiveTransition.swift */,
-				3518AE991CE4C7BB00F86184 /* CPImageControllerProtocol.swift */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -179,6 +181,7 @@
 				95C55F7E1C81313A00BD0E89 /* TableViewController.swift */,
 				9501F8F51C81467C004A8814 /* CollectionViewController.swift */,
 				35DEA4141C8BAC3000869EDC /* CollectionViewCell.swift */,
+				DB099D03215B40D7006B94D8 /* CollectionVC.swift */,
 				95D3A3191C71E270003A750C /* Assets.xcassets */,
 				95D3A31B1C71E270003A750C /* LaunchScreen.storyboard */,
 				95C55F821C81394800BD0E89 /* Main.storyboard */,
@@ -265,24 +268,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = cp3hnu;
 				TargetAttributes = {
 					353941661CDDF47E0044FD7C = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = RJF3498JFC;
-						LastSwiftMigration = 0800;
+						DevelopmentTeam = 9YLTDFGYW3;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					3539416F1CDDF47F0044FD7C = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1000;
 						TestTargetID = 95D3A30E1C71E26F003A750C;
 					};
 					95D3A30E1C71E26F003A750C = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = RJF3498JFC;
-						LastSwiftMigration = 0800;
+						DevelopmentTeam = 9YLTDFGYW3;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -341,8 +344,8 @@
 			files = (
 				353941881CDDF57B0044FD7C /* CPImageViewerInteractiveTransition.swift in Sources */,
 				353941871CDDF57B0044FD7C /* CPImageViewerAnimationTransition.swift in Sources */,
-				3518AE9A1CE4C7BB00F86184 /* CPImageControllerProtocol.swift in Sources */,
-				353941851CDDF57A0044FD7C /* CPImageViewerViewController.swift in Sources */,
+				3518AE9A1CE4C7BB00F86184 /* CPImageViewerProtocol.swift in Sources */,
+				353941851CDDF57A0044FD7C /* CPImageViewer.swift in Sources */,
 				353941861CDDF57B0044FD7C /* CPImageViewerAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +366,7 @@
 				95C55F7F1C81313A00BD0E89 /* TableViewController.swift in Sources */,
 				95C55F781C81304900BD0E89 /* ViewController.swift in Sources */,
 				95C55F791C81304900BD0E89 /* GeneralViewController.swift in Sources */,
+				DB099D04215B40D7006B94D8 /* CollectionVC.swift in Sources */,
 				95D3A3131C71E26F003A750C /* AppDelegate.swift in Sources */,
 				35DEA4151C8BAC3000869EDC /* CollectionViewCell.swift in Sources */,
 			);
@@ -418,7 +422,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RJF3498JFC;
+				DEVELOPMENT_TEAM = 9YLTDFGYW3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -429,7 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.datayp.CPImageViewerKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -444,7 +448,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RJF3498JFC;
+				DEVELOPMENT_TEAM = 9YLTDFGYW3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -455,7 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.datayp.CPImageViewerKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -470,8 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zte.CPImageViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CPImageViewerExample.app/CPImageViewerExample";
 			};
 			name = Debug;
@@ -485,8 +488,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zte.CPImageViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CPImageViewerExample.app/CPImageViewerExample";
 			};
 			name = Release;
@@ -503,12 +505,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -557,12 +561,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -602,14 +608,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				CURRENT_PROJECT_VERSION = 167;
-				DEVELOPMENT_TEAM = RJF3498JFC;
+				DEVELOPMENT_TEAM = 9YLTDFGYW3;
 				INFOPLIST_FILE = CPImageViewer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.datayp.CPImageViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -622,14 +628,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				CURRENT_PROJECT_VERSION = 167;
-				DEVELOPMENT_TEAM = RJF3498JFC;
+				DEVELOPMENT_TEAM = 9YLTDFGYW3;
 				INFOPLIST_FILE = CPImageViewer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.datayp.CPImageViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

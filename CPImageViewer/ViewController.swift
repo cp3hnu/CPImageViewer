@@ -27,7 +27,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,8 +40,10 @@ class ViewController: UITableViewController {
             cell.textLabel?.text = "TableView"
             
         case 2:
-            cell.textLabel?.text = "CollectionView"
+            cell.textLabel?.text = "CollectionVC"
             
+        case 3:
+            cell.textLabel?.text = "CollectionView"
         default:
             break
         }
@@ -73,9 +75,12 @@ class ViewController: UITableViewController {
         } else if indexPath.row == 1 {
             controller = storyboard.instantiateViewController(withIdentifier: "TableVC")
             (controller as! TableViewController).isPresented = isPresented
-        } else {
+        } else if indexPath.row == 2 {
             controller = storyboard.instantiateViewController(withIdentifier: "CollectionVC")
             (controller as! CollectionViewController).isPresented = isPresented
+        } else {
+            controller = storyboard.instantiateViewController(withIdentifier: "CollectionView")
+            (controller as! CollectionVC).isPresented = isPresented
         }
         
         navigationController?.pushViewController(controller, animated: true)

@@ -8,17 +8,16 @@
 
 import UIKit
 
-open class CPImageViewerAnimationTransition: NSObject, UIViewControllerAnimatedTransitioning {
-
+final class CPImageViewerAnimationTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     /// Be false when Push or Present, and true when Pop or Dismiss
-    open var isBack = false
+    var isBack = false
     
-    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)!
         let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)!
@@ -26,28 +25,33 @@ open class CPImageViewerAnimationTransition: NSObject, UIViewControllerAnimatedT
         let style = transitionContext.presentationStyle
         let finalFrame = transitionContext.finalFrame(for: toVC)
         
-        // Solving the error of location of image view after rotating device and returning to previous controller. See ImageViewerViewController.init()
-        // The OverFullScreen style don't need add toVC.view
-        // The style is None when ImageViewerViewController.viewerStyle is CPImageViewerStyle.Push
+        // Solving the error of location of image view after rotating device and returning to previous controller. See *CPImageViewer.init()*
+        // The overFullScreen style don't need add toVC.view
+        // The style is none when CPImageViewer.style is CPImageViewer.Style.push
         if style != .overFullScreen && isBack {
             containerView.addSubview(toVC.view)
-            containerView.sendSubview(toBack: toVC.view)
+            containerView.sendSubviewToBack(toVC.view)
             
-            if toVC.view.bounds.size != finalFrame.size {
-                toVC.view.frame = finalFrame
-                toVC.view.setNeedsLayout()
-                toVC.view.layoutIfNeeded()
-            }
+            toVC.view.frame = finalFrame
+            toVC.view.setNeedsLayout()
+            toVC.view.layoutIfNeeded()
         }
         
         let backgroundView = UIView(frame: finalFrame)
         backgroundView.backgroundColor = UIColor.black
         containerView.addSubview(backgroundView)
         
-        let fromImageView: UIImageView! = (fromVC as! CPImageControllerProtocol).animationImageView
-        let toImageView: UIImageView! = (toVC as! CPImageControllerProtocol).animationImageView
-        let fromFrame = fromImageView.convert((fromImageView.bounds), to: containerView)
-        let toFrame = toImageView.convert((toImageView.bounds), to: containerView)
+        let fromImageView: UIImageView! = (fromVC as! CPImageViewerProtocol).animationImageView
+        let toImageView: UIImageView! = (toVC as! CPImageViewerProtocol).animationImageView
+        let fromFrame = fromImageView.convert(fromImageView.bounds, to: containerView)
+        var toFrame = toImageView.convert(toImageView.bounds, to: containerView)
+        
+        // Solving the error of location of image view in UICollectionView after rotating device and returning to previous controller
+        if let frame = (toVC as! CPImageViewerProtocol).originalFrame {
+            //print("frame = ", frame)
+            toFrame = toVC.view.convert(frame, to: containerView)
+            //print("toFrame = ", toFrame)
+        }
         
         let newImageView = UIImageView(frame: fromFrame)
         newImageView.image = fromImageView.image
@@ -63,7 +67,7 @@ open class CPImageViewerAnimationTransition: NSObject, UIViewControllerAnimatedT
         }
         
         let duration = transitionDuration(using: transitionContext)
-        UIView.animate(withDuration: duration, delay: 0, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(), animations: {
             if !self.isBack {
                 newImageView.frame = finalFrame
                 backgroundView.alpha = 1.0

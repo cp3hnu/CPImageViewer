@@ -11,10 +11,10 @@ import CPImageViewer
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController, CPImageControllerProtocol {
+class CollectionViewController: UICollectionViewController, CPImageViewerProtocol {
 
     var isPresented = false
-    var animationImageView: UIImageView!
+    var animationImageView: UIImageView?
     var animator = CPImageViewerAnimator()
     
     override func viewDidLoad() {
@@ -56,17 +56,15 @@ class CollectionViewController: UICollectionViewController, CPImageControllerPro
     }
     
     func tap() {
-        let controller = CPImageViewerViewController()
-        controller.transitioningDelegate = animator
-        controller.image = animationImageView.image
-        
         if !isPresented {
-            controller.viewerStyle = .push
+            let controller = CPImageViewer(style: CPImageViewer.Style.push)
+            controller.image = animationImageView!.image
             controller.title = "CPImageViewer"
             navigationController?.pushViewController(controller, animated: true)
         } else {
+            let controller = CPImageViewer()
+            controller.image = animationImageView!.image
             present(controller, animated: true, completion: nil)
         }
     }
-
 }

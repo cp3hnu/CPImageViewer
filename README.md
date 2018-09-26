@@ -33,31 +33,7 @@ github "cp3hnu/CPImageViewer"
      ```swift
      /usr/local/bin/carthage copy-frameworks
      ```
-*   Add Input files *$(SRCROOT)/Carthage/Build/iOS/CPImageViewer.framework*
-
-    ​
-
-## Properties
-
-These properties is global and applied to the whole project.
-
-``` swift
-/// The viewer style. Defaults to Presentation
-public var viewerStyle = CPImageViewerStyle.presentation
-
-/// The image of animation image view
-public var image: UIImage?
-
-/// The title of *navigationItem.rightBarButtonItem* when viewerStyle is Push
-public var rightBarItemTitle: String?
-
-/// The image of *navigationItem.rightBarButtonItem* when viewerStyle is Push
-public var rightBarItemImage: UIImage?
-
-/// The action of *navigationItem.rightBarButtonItem* when viewerStyle is Push
-public var rightAction: ((Void) -> (Void))?
-```
-
+* Add Input files *$(SRCROOT)/Carthage/Build/iOS/CPImageViewer.framework*
 
 
 ## Usage
@@ -66,8 +42,8 @@ It's very easy to use **CPImageViewer**.
 
 Firstly, conforming to  *CPImageControllerProtocol* protocol and initializing the *animationImageView* or assigning it an image view.
 ``` swift
-class ViewController: UIViewController, ImageControllerProtocol {
-  var animationImageView: UIImageView!
+class ViewController: UIViewController, CPImageViewerProtocol {
+  var animationImageView: UIImageView?
 }
 
 override func viewDidLoad() {
@@ -78,24 +54,22 @@ override func viewDidLoad() {
 }
 ```
 
-Then, presenting the *CPImageViewerViewController*
+Then, presenting the **CPImageViewer**
 
 ``` swift
-let controller = CPImageViewerViewController()
-controller.transitioningDelegate = CPImageViewerAnimator()
-controller.image = animationImageView.image 
+let controller = CPImageViewer(style: CPImageViewer.Style.presentation)
+controller.image = animationImageView.image
 self.present(controller, animated: true, completion: nil)
 ```
 
-or pushing the *CPImageViewerViewController*
+or pushing the **CPImageViewer**
 
 ``` swift
 override func viewDidLoad() {
     self.navigationController?.delegate = CPImageViewerAnimator()
 }
 
-let controller = CPImageViewerViewController()
-controller.viewerStyle = .push
+let controller = CPImageViewer(style: CPImageViewer.Style.push)
 controller.image = animationImageView.image 
 controller.title = "CPImageViewer"
 self.navigationController?.pushViewController(controller, animated: true)

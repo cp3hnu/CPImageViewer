@@ -48,9 +48,9 @@ class ViewController: UIViewController, CPImageViewerProtocol {
 
 override func viewDidLoad() {
     animationImageView = UIImageView()
-	animationImageView.frame = <#frame#>
-	animationImageView.image = <#image#>
-	self.view.addSubview(animationImageView)
+    animationImageView.frame = <#frame#>
+    animationImageView.image = <#image#>
+    self.view.addSubview(animationImageView)
 }
 ```
 

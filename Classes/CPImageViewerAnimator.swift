@@ -49,7 +49,7 @@ public final class CPImageViewerAnimator: NSObject, UINavigationControllerDelega
     
     // MARK: - UINavigationDelegate
     public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
+
         if operation == .push,
             fromVC is CPImageViewerProtocol,
             let imageViewer = toVC as? CPImageViewer {
@@ -63,10 +63,10 @@ public final class CPImageViewerAnimator: NSObject, UINavigationControllerDelega
             animator.isBack = true
             return animator
         }
-        
+
         return nil
     }
-    
+
     public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interativeAnimator.interactionInProgress ? interativeAnimator : nil
     }

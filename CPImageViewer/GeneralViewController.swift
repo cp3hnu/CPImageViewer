@@ -22,21 +22,22 @@ class GeneralViewController: UIViewController, CPImageViewerProtocol {
         let tap = UITapGestureRecognizer(target: self, action: #selector(GeneralViewController.tap))
         animationImageView?.addGestureRecognizer(tap)
         animationImageView?.isUserInteractionEnabled = true
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if !isPresented {
-            navigationController?.delegate = animator
+            navigationController?.delegate = nil
         }
     }
 
     @objc func tap() {
         if !isPresented {
+            navigationController?.delegate = animator
+            
             let controller = CPImageViewer(style: CPImageViewer.Style.push)
             controller.image = animationImageView!.image
             controller.title = "CPImageViewer"
             controller.rightBarItemTitle = "Delete"
-            controller.rightAction = {
-                print("Delete")
-            }
             navigationController?.pushViewController(controller, animated: true)
         } else {
             let controller = CPImageViewer()
